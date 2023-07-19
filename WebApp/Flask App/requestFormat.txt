@@ -1,0 +1,13 @@
+var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': 'http://127.0.0.1:5000/predict',
+  'headers': {
+  },
+  body: '{"CUSTOMER_ORDER_ID": [946851639, 963432061], "SALES_ORG": [3537, 3449], "DISTRIBUTION_CHANNEL": ["United States of America", "Martinique"], "DIVISION": ["South-Region", "South-Region"], "RELEASED_CREDIT_VALUE": [0.0, 0.0], "PURCHASE_ORDER_TYPE": ["1000", "1000"], "COMPANY_CODE": [3220, 3220], "ORDER_CREATION_DATE": ["2022-01-01", "2022-01-01"], "ORDER_CREATION_TIME": [43012, 43114], "CREDIT_CONTROL_AREA": ["SR02", "NR03"], "SOLD_TO_PARTY": [756141537, 798847812], "ORDER_AMOUNT": [954.61, 787.36], "REQUESTED_DELIVERY_DATE": ["2022-01-13", "2022-01-11"], "ORDER_CURRENCY": ["EUR", "EUR"], "CREDIT_STATUS": [null, null], "CUSTOMER_NUMBER": [12311807, 12311807], "amount_in_usd": [1082.1140756666666, 892.5250506666666], "unique_cust_id": [123118073220, 123118073220]}'
+
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
