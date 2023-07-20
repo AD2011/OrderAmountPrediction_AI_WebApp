@@ -1,1 +1,1 @@
-# OrderAmountPrediction_AI_WebApp
+# OrderAmountPrediction AI WebApp
